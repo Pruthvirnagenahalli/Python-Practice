@@ -1,0 +1,8 @@
+TO CHECK WHETHER THE GIVEN NUMBER ID EVEN OR ODD 
+
+num = int(input("Enter the number")
+
+if num % 2 == 0:
+print("It is an even number")
+esle:
+print("It is an odd number")
