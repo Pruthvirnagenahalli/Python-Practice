@@ -1,0 +1,24 @@
+#Tuples in python
+
+#CONCATINATION
+
+tuple1 = (1,2,3)
+tuple2 = (4,5,6)
+tuple_combine = tuple1+tuple2
+print(tuple_combine)
+
+
+#TUPLE REPETITION
+
+repeated_tuple = ("1,2") * 3
+print(repeated_tuple)
+
+#COUNT AND INDEX
+
+my_tuple = (1,2,1,2,5,2,6,1,4)
+print(my-tuple.count(1))
+
+
+my_tuple = ("apple", "mango", "banana")
+print(my_tupleindex("mango"))
+
