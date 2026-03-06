@@ -1,0 +1,47 @@
+# Two Sum – LeetCode Problem #1
+
+## Problem
+Given an array of integers `nums` and an integer `target`, return the indices of the two numbers such that they add up to the target.
+
+You may assume that:
+- Each input has exactly one solution.
+- You cannot use the same element twice.
+- The answer can be returned in any order.
+
+## Example
+
+Input:
+nums = [2,7,11,15]  
+target = 9  
+
+Output:
+[0,1]
+
+Explanation:  
+nums[0] + nums[1] = 2 + 7 = 9
+
+## Approach
+The solution uses a **hash map (dictionary)** to store numbers and their indices while iterating through the array.
+
+For each element:
+1. Calculate the complement (`target - current number`).
+2. Check if the complement already exists in the hash map.
+3. If it exists, return the indices.
+4. Otherwise store the current number and index in the hash map.
+
+This allows the solution to run in **O(n) time complexity**.
+
+## Python Implementation
+
+```python
+class Solution(object):
+    def twoSum(self, nums, target):
+        hashmap = {}
+
+        for i in range(len(nums)):
+            complement = target - nums[i]
+
+            if complement in hashmap:
+                return [hashmap[complement], i]
+
+            hashmap[nums[i]] = i
